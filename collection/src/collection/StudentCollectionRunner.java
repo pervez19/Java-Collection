@@ -14,6 +14,10 @@ public class StudentCollectionRunner {
 		List <Student> studentAll = new ArrayList<Student>(students);
 		System.out.println(studentAll);
 		Collections.sort(studentAll);
-		System.out.println(studentAll);
+		System.out.println("Asc : "+studentAll);
+		Collections.sort(studentAll, new DescendingStudentComparator());
+		System.out.println("Desc : "+studentAll);
+		studentAll.sort(new AscendingStudentComparator());
+		System.out.println("Asc : "+studentAll);
 	}
 }
